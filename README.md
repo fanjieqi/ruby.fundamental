@@ -190,25 +190,25 @@ Refers to a specific form of decoupling software modules. When following this pr
 
 In software engineering, creational design patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form of object creation could result in design problems or in added complexity to the design. Creational design patterns solve this problem by somehow controlling this object creation. Creational design patterns are composed of two dominant ideas. One is encapsulating knowledge about which concrete classes the system uses. Another is hiding how instances of these concrete classes are created and combined.
 
-[Read wiki](https://en.wikipedia.org/wiki/Creational_pattern)
+[维基百科](https://en.wikipedia.org/wiki/Creational_pattern)
 
 #### 抽象工厂模式
 
 The abstract factory pattern provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes. In normal usage, the client software creates a concrete implementation of the abstract factory and then uses the generic interface of the factory to create the concrete objects that are part of the theme. The client doesn't know (or care) which concrete objects it gets from each of these internal factories, since it uses only the generic interfaces of their products. This pattern separates the details of implementation of a set of objects from their general usage and relies on object composition, as object creation is implemented in methods exposed in the factory interface.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/abstract_factory.rb) | [Read wiki](https://en.wikipedia.org/wiki/Abstract_factory_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/abstract_factory.rb) | [维基百科](https://en.wikipedia.org/wiki/Abstract_factory_pattern)
 
 #### 生成器模式
 
 The builder pattern is an object creation software design pattern. Unlike the abstract factory pattern and the factory method pattern whose intention is to enable polymorphism, the intention of the builder pattern is to find a solution to the telescoping constructor anti-pattern[citation needed]. The telescoping constructor anti-pattern occurs when the increase of object constructor parameter combination leads to an exponential list of constructors. Instead of using numerous constructors, the builder pattern uses another object, a builder, that receives each initialization parameter step by step and then returns the resulting constructed object at once.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/builder.rb) | [Read wiki](https://en.wikipedia.org/wiki/Builder_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/builder.rb) | [维基百科](https://en.wikipedia.org/wiki/Builder_pattern)
 
 #### 工厂模式
 
 In class-based programming, the factory method pattern is a creational pattern that uses factory methods to deal with the problem of creating objects without having to specify the exact class of the object that will be created. This is done by creating objects by calling a factory method—either specified in an interface and implemented by child classes, or implemented in a base class and optionally overridden by derived classes—rather than by calling a constructor.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/factory.rb) | [Read wiki](https://en.wikipedia.org/wiki/Factory_method_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/factory.rb) | [维基百科](https://en.wikipedia.org/wiki/Factory_method_pattern)
 
 #### 原型模式
 
@@ -217,13 +217,13 @@ The prototype pattern is a creational design pattern in software development. It
 * avoid subclasses of an object creator in the client application, like the abstract factory pattern does.
 * avoid the inherent cost of creating a new object in the standard way (e.g., using the 'new' keyword) when it is prohibitively expensive for a given application.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/prototype.rb) | [Read wiki](https://en.wikipedia.org/wiki/Prototype_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/prototype.rb) | [维基百科](https://en.wikipedia.org/wiki/Prototype_pattern)
 
 #### 单例模式
 
 Ensure a class only has one instance, and provide a global point of access to it. This is useful when exactly one object is needed to coordinate actions across the system. The concept is sometimes generalized to systems that operate more efficiently when only one object exists, or that restrict the instantiation to a certain number of objects.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/singleton.rb) | [Read wiki](https://en.wikipedia.org/wiki/Singleton_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/singleton.rb) | [维基百科](https://en.wikipedia.org/wiki/Singleton_pattern)
 
 #### Not covered patterns:
 
@@ -241,43 +241,43 @@ Ensure a class only has one instance, and provide a global point of access to it
 
 In software engineering, structural design patterns are design patterns that ease the design by identifying a simple way to realize relationships between entities.
 
-[Read wiki](https://en.wikipedia.org/wiki/Structural_pattern)
+[维基百科](https://en.wikipedia.org/wiki/Structural_pattern)
 
 #### 适配器模式
 
 In software engineering, the adapter pattern is a software design pattern that allows the interface of an existing class to be used as another interface. It is often used to make existing classes work with others without modifying their source code.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/adapter.rb) | [Read wiki](https://en.wikipedia.org/wiki/Adapter_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/adapter.rb) | [维基百科](https://en.wikipedia.org/wiki/Adapter_pattern)
 
 #### 组合模式
 
 The composite design pattern is a structural pattern used to represent objects that have a hierarchical tree structure. It allows for the uniform treatment of both individual leaf nodes and of branches composed of many nodes.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/composite.rb) | [Read wiki](https://en.wikipedia.org/wiki/Composite_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/composite.rb) | [维基百科](https://en.wikipedia.org/wiki/Composite_pattern)
 
 #### 修饰模式
 
 In object-oriented programming, the decorator pattern (also known as Wrapper, an alternative naming shared with the Adapter pattern) is a design pattern that allows behavior to be added to an individual object, either statically or dynamically, without affecting the behavior of other objects from the same class. The decorator pattern is often useful for adhering to the Single Responsibility Principle, as it allows functionality to be divided between classes with unique areas of concern.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/decorator.rb) | [Read wiki](https://en.wikipedia.org/wiki/Decorator_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/decorator.rb) | [维基百科](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 #### 外观模式
 
 The Facade design pattern is often used when a system is very complex or difficult to understand because the system has a large number of interdependent classes or its source code is unavailable. This pattern hides the complexities of the larger system and provides a simpler interface to the client. It typically involves a single wrapper class which contains a set of members required by client. These members access the system on behalf of the facade client and hide the implementation details.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/facade.rb) | [Read wiki](https://en.wikipedia.org/wiki/Facade_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/facade.rb) | [维基百科](https://en.wikipedia.org/wiki/Facade_pattern)
 
 #### 享元模式
 
 In computer programming, flyweight is a software design pattern. A flyweight is an object that minimizes memory use by sharing as much data as possible with other similar objects; it is a way to use objects in large numbers when a simple repeated representation would use an unacceptable amount of memory. Often some parts of the object state can be shared, and it is common practice to hold them in external data structures and pass them to the flyweight objects temporarily when they are used.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/flyweight.rb) | [Read wiki](https://en.wikipedia.org/wiki/Flyweight_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/flyweight.rb) | [维基百科](https://en.wikipedia.org/wiki/Flyweight_pattern)
 
 #### 代理模式
 
 A proxy, in its most general form, is a class functioning as an interface to something else. The proxy could interface to anything: a network connection, a large object in memory, a file, or some other resource that is expensive or impossible to duplicate. In short, a proxy is a wrapper or agent object that is being called by the client to access the real serving object behind the scenes. Use of the proxy can simply be forwarding to the real object, or can provide additional logic. In the proxy extra functionality can be provided, for example caching when operations on the real object are resource intensive, or checking preconditions before operations on the real object are invoked. For the client, usage of a proxy object is similar to using the real object, because both implement the same interface.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/proxy.rb) | [Read wiki](https://en.wikipedia.org/wiki/Proxy_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/proxy.rb) | [维基百科](https://en.wikipedia.org/wiki/Proxy_pattern)
 
 #### Not covered patterns:
 
@@ -293,25 +293,25 @@ A proxy, in its most general form, is a class functioning as an interface to som
 
 In software engineering, behavioral design patterns are design patterns that identify common communication patterns between objects and realize these patterns. By doing so, these patterns increase flexibility in carrying out this communication.
 
-[Read wiki](https://en.wikipedia.org/wiki/Behavioral_pattern)
+[维基百科](https://en.wikipedia.org/wiki/Behavioral_pattern)
 
 #### 责任链模式
 
 In object-oriented design, the chain-of-responsibility pattern is a design pattern consisting of a source of command objects and a series of processing objects. Each processing object contains logic that defines the types of command objects that it can handle; the rest are passed to the next processing object in the chain. A mechanism also exists for adding new processing objects to the end of this chain.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/chain_of_responsibility.rb) | [Read wiki](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/chain_of_responsibility.rb) | [维基百科](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
 
 #### 命令模式
 
 Encapsulate a request as an object, thereby allowing for the parameterization of clients with different requests, and the queuing or logging of requests. It also allows for the support of undoable operations.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/command.rb) | [Read wiki](https://en.wikipedia.org/wiki/Command_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/command.rb) | [维基百科](https://en.wikipedia.org/wiki/Command_pattern)
 
 #### 解释器模式
 
 In computer programming, the interpreter pattern is a design pattern that specifies how to evaluate sentences in a language. The basic idea is to have a class for each symbol (terminal or nonterminal) in a specialized computer language. The syntax tree of a sentence in the language is an instance of the composite pattern and is used to evaluate (interpret) the sentence for a client.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/interpreter.rb) | [Read wiki](https://en.wikipedia.org/wiki/Interpreter_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/interpreter.rb) | [维基百科](https://en.wikipedia.org/wiki/Interpreter_pattern)
 
 #### 迭代器模式
 
@@ -321,31 +321,31 @@ The iterator design pattern provides sequential access to elements within a cont
 
 * Internal iterator: all the iterating logic occurs inside the aggregate object. Use a code block to pass your logic into the aggregate which then calls the block for each of it's elements.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/iterator.rb) | [Read wiki](https://en.wikipedia.org/wiki/Iterator_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/iterator.rb) | [维基百科](https://en.wikipedia.org/wiki/Iterator_pattern)
 
 #### 中介者模式
 
 Usually a program is made up of a large number of classes. So the logic and computation is distributed among these classes. However, as more classes are developed in a program, especially during maintenance and/or refactoring, the problem of communication between these classes may become more complex. This makes the program harder to read and maintain. Furthermore, it can become difficult to change the program, since any change may affect code in several other classes. With the mediator pattern, communication between objects is encapsulated with a mediator object. Objects no longer communicate directly with each other, but instead communicate through the mediator. This reduces the dependencies between communicating objects, thereby lowering the coupling.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/mediator.rb) | [Read wiki](https://en.wikipedia.org/wiki/Mediator_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/mediator.rb) | [维基百科](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 #### 备忘录模式
 
 The memento pattern is implemented with three objects: the originator, a caretaker and a memento. The originator is some object that has an internal state. The caretaker is going to do something to the originator, but wants to be able to undo the change. The caretaker first asks the originator for a memento object. Then it does whatever operation (or sequence of operations) it was going to do. To roll back to the state before the operations, it returns the memento object to the originator. The memento object itself is an opaque object (one which the caretaker cannot, or should not, change). When using this pattern, care should be taken if the originator may change other objects or resources - the memento pattern operates on a single object.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/momento.rb) | [Read wiki](https://en.wikipedia.org/wiki/Memento_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/momento.rb) | [维基百科](https://en.wikipedia.org/wiki/Memento_pattern)
 
 #### 观察者模式
 
 The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods. It is mainly used to implement distributed event handling systems. The Observer pattern is also a key part in the familiar model–view–controller (MVC) architectural pattern. The observer pattern is implemented in numerous programming libraries and systems, including almost all GUI toolkits.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/observer.rb) | [Read wiki](https://en.wikipedia.org/wiki/Observer_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/observer.rb) | [维基百科](https://en.wikipedia.org/wiki/Observer_pattern)
 
 #### 状态模式
 
 The state pattern is a behavioral software design pattern that implements a state machine in an object-oriented way. With the state pattern, a state machine is implemented by implementing each individual state as a derived class of the state pattern interface, and implementing state transitions by invoking methods defined by the pattern's superclass.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/state.rb) | [Read wiki](https://en.wikipedia.org/wiki/State_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/state.rb) | [维基百科](https://en.wikipedia.org/wiki/State_pattern)
 
 #### 策略模式
 
@@ -359,13 +359,13 @@ Strategy lets the algorithm vary independently from clients that use it. Strateg
 
 For instance, a class that performs validation on incoming data may use a strategy pattern to select a validation algorithm based on the type of data, the source of the data, user choice, or other discriminating factors. These factors are not known for each case until run-time, and may require radically different validation to be performed. The validation strategies, encapsulated separately from the validating object, may be used by other validating objects in different areas of the system (or even different systems) without code duplication.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/strategy.rb) | [Read wiki](https://en.wikipedia.org/wiki/Strategy_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/strategy.rb) | [维基百科](https://en.wikipedia.org/wiki/Strategy_pattern)
 
 #### 模板方法模式
 
 In object-oriented programming, first a class is created that provides the basic steps of an algorithm design. These steps are implemented using abstract methods. Later on, subclasses change the abstract methods to implement real actions. Thus the general algorithm is saved in one place but the concrete steps may be changed by the subclasses.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/template_method.rb) | [Read wiki](https://en.wikipedia.org/wiki/Template_method_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/template_method.rb) | [维基百科](https://en.wikipedia.org/wiki/Template_method_pattern)
 
 #### 访问者模式
 
@@ -373,7 +373,7 @@ n object-oriented programming and software engineering, the visitor design patte
 
 In essence, the visitor allows one to add new virtual functions to a family of classes without modifying the classes themselves; instead, one creates a visitor class that implements all of the appropriate specializations of the virtual function. The visitor takes the instance reference as input, and implements the goal through double dispatch.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/visitor.rb) | [Read wiki](https://en.wikipedia.org/wiki/Visitor_pattern)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/visitor.rb) | [维基百科](https://en.wikipedia.org/wiki/Visitor_pattern)
 
 #### Not covered patterns:
 
@@ -429,55 +429,55 @@ The running time performance of the common language runtime is given by a set of
 
 The stack is the sibling of the queue. It mimicks a real-life stack (e.g. of paper). It is FILO (first-in-last-out), so that when items are retrieved from the stack, they are returned in the reverse of the order in which they were added. Again, Ruby Arrays provide a perfect container. As with the Queue, it could also be implemented using a linked list.
 
-| Structure | Average Access | Average Search | Average Insertion | Average Deletion | Worst Access | Worst Search | Worst Insertion | Worst Deletion |
+| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-[Stack](http://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
+[栈](http://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
-[See stack as array example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/stack_as_array.rb) | [Read implementation steps](http://www.brpreiss.com/books/opus8/html/page131.html)
+[See stack as array example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/stack_as_array.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page131.html)
 
-[See stack as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/stack_as_linked_list.rb) | [Read implementation steps](http://www.brpreiss.com/books/opus8/html/page137.html)
+[See stack as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/stack_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page137.html)
 
 #### 队列
 
 A queue is a simple container-based structure that mimics a real-life queue (e.g. waiting in line at the bank). It is FIFO (first-in-first-out), meaning that when you retrieve items from the queue, they are returned in the order in which they entered. Ruby Arrays provide methods that make Queue implementation trivially easy, but having them named appropriately and contained in a convenience class is worth it to see how they are implemented, and because other structures will inherit from this one. An alternate implementation could be done using a linked list.
 
-| Structure | Average Access | Average Search | Average Insertion | Average Deletion | Worst Access | Worst Search | Worst Insertion | Worst Deletion |
+| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-[Queue](http://en.wikipedia.org/wiki/Queue_(abstract_data_type)) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
+[队](http://en.wikipedia.org/wiki/Queue_(abstract_data_type)) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
-[See queue as array example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/queue_as_array.rb) | [Read implementation steps](http://www.brpreiss.com/books/opus8/html/page147.html)
+[See queue as array example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/queue_as_array.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page147.html)
 
-[See queue as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/queue_as_linked_list.rb) | [Read implementations steps](http://www.brpreiss.com/books/opus8/html/page151.html)
+[See queue as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/queue_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page151.html)
 
 #### 双端队列
 
 A Deque is a queue which allows adding and removing items at both ends.
 
-| Structure | Average Access | Average Search | Average Insertion | Average Deletion | Worst Access | Worst Search | Worst Insertion | Worst Deletion |
+| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-[Deque](https://en.wikipedia.org/wiki/Double-ended_queue) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
+[双端队列](https://en.wikipedia.org/wiki/Double-ended_queue) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
-[See queue as array example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/deque_as_array.rb) | [Read implementation steps](http://www.brpreiss.com/books/opus8/html/page158.html)
+[See queue as array example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/deque_as_array.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page158.html)
 
-[See queue as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/deque_as_linked_list.rb) | [Read implementations steps](http://www.brpreiss.com/books/opus8/html/page161.html)
+[See queue as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/deque_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page161.html)
 
 #### 单向链表
 
 Singly linked lists contain nodes which have a data field as well as a 'next' field, which points to the next node in line of nodes. Operations that can be performed on singly linked lists include insertion, deletion and traversal.
 
-| Structure | Average Access | Average Search | Average Insertion | Average Deletion | Worst Access | Worst Search | Worst Insertion | Worst Deletion |
+| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | 删除最坏复杂度 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-[Singly-Linked List](http://en.wikipedia.org/wiki/Singly_linked_list#Singly_linked_lists) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
+[单向链表](http://en.wikipedia.org/wiki/Singly_linked_list#Singly_linked_lists) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/singly_linked_list.rb) | [Read implementations steps](http://www.brpreiss.com/books/opus8/html/page96.html#SECTION004300000000000000000) | [Read wiki](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list) 
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/singly_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page96.html#SECTION004300000000000000000) | [维基百科](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_list) 
 
 #### 双向链表
 
 In a doubly-linked list , each list element contains two references--one to its successor and one to its predecessor. 
 
-| Structure | Average Access | Average Search | Average Insertion | Average Deletion | Worst Access | Worst Search | Worst Insertion | Worst Deletion |
+| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-[Doubly-Linked List](http://en.wikipedia.org/wiki/Doubly_linked_list) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` | 
+[双向链表](http://en.wikipedia.org/wiki/Doubly_linked_list) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` | 
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/double_linked_list.rb)
 
@@ -485,22 +485,22 @@ In a doubly-linked list , each list element contains two references--one to its 
  
 An ordered list is a list in which the order of the items is significant. However, the items in an ordered lists are not necessarily sorted. Consequently, it is possible to change the order of items and still have a valid ordered list.
 
-| Structure | Average Access | Average Search | Average Insertion | Average Deletion | Worst Access | Worst Search | Worst Insertion | Worst Deletion |
+| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-OrderedListAsArray      |`Θ(1)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(1)` | `O(n)` | `O(1)` | `O(1)` |
-OrderedListAsLinkedList |`Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
+有序列表(数组) |`Θ(1)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(1)` | `O(n)` | `O(1)` | `O(1)` |
+有序列表(链表) |`Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
-[See ordered list as array example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/ordered_list_as_array.rb) | [Read implementation steps](http://www.brpreiss.com/books/opus8/html/page169.html)
+[See ordered list as array example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/ordered_list_as_array.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page169.html)
 
-[See ordered list as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/ordered_as_linked_list.rb) | [Read implementations steps](http://www.brpreiss.com/books/opus8/html/page178.html)
+[See ordered list as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/ordered_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page178.html)
 
 #### 哈表表
 
 A hash table  is a searchable container. As such, it provides methods for putting an object into the container, finding an object in the container, and removing an object from the container.
 
-| Structure | Average Access | Average Search | Average Insertion | Average Deletion | Worst Access | Worst Search | Worst Insertion | Worst Deletion |
+| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-[Hash Table](http://en.wikipedia.org/wiki/Hash_table) | `Θ(n)` | `Θ(1)` | `Θ(1)` | `Θ(1)` | `Θ(n)` | `O(n)` | `O(n)` | `O(n)` |
+[哈表表](http://en.wikipedia.org/wiki/Hash_table) | `Θ(n)` | `Θ(1)` | `Θ(1)` | `Θ(1)` | `Θ(n)` | `O(n)` | `O(n)` | `O(n)` |
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/hash_table.rb) | [Rad implementation steps](http://www.brpreiss.com/books/opus8/html/page222.html)
 
@@ -508,41 +508,41 @@ A hash table  is a searchable container. As such, it provides methods for puttin
 
 A binary tree is a tree in which each node can have a maximum of two children. The children are designated left and right. 
 
-| Structure | Average Access | Average Search | Average Insertion | Average Deletion | Worst Access | Worst Search | Worst Insertion | Worst Deletion |
+| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-[Binary Tree](https://en.wikipedia.org/wiki/Binary_tree) | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `O(n)` | `O(n)` | `O(n)` | `O(n)` |
+[二叉树](https://en.wikipedia.org/wiki/Binary_tree) | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `O(n)` | `O(n)` | `O(n)` | `O(n)` |
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/binary_tree.rb) | [Read implementation steps](http://www.brpreiss.com/books/opus8/html/page286.html)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/binary_tree.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page286.html)
 
 #### 二叉查找树
 
 In computer science, binary search trees (BST), sometimes called ordered or sorted binary trees, are a particular type of containers: data structures that store "items" (such as numbers, names etc.) in memory. They allow fast lookup, addition and removal of items, and can be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., finding the phone number of a person by name)
 
-| Structure | Average Access | Average Search | Average Insertion | Average Deletion | Worst Access | Worst Search | Worst Insertion | Worst Deletion |
+| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-[Binary Search Tree](http://en.wikipedia.org/wiki/Binary_search_tree) | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `O(n)` | `O(n)` | `O(n)` | `O(n)` |
+[二叉查找树](http://en.wikipedia.org/wiki/Binary_search_tree) | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `O(n)` | `O(n)` | `O(n)` | `O(n)` |
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/binary_search_tree.rb) | [Read implementation steps](http://www.brpreiss.com/books/opus8/html/page300.html)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/binary_search_tree.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page300.html)
 
 #### B树
 
 In computer science, a B-tree is a self-balancing tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree is a generalization of a binary search tree in that a node can have more than two children (Comer . Unlike self-balancing binary search trees, the B-tree is optimized for systems that read and write large blocks of data. B-trees are a good example of a data structure for external memory. It is commonly used in databases and filesystems.
 
-| Structure | Average Access | Average Search | Average Insertion | Average Deletion | Worst Access | Worst Search | Worst Insertion | Worst Deletion |
+| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-[B-Tree](http://en.wikipedia.org/wiki/B_tree) | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `O(log(n))` | `O(log(n))` | `O(log(n))` | `O(log(n))` | `O(log(n))` | 
+[B树](http://en.wikipedia.org/wiki/B_tree) | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `O(log(n))` | `O(log(n))` | `O(log(n))` | `O(log(n))` | `O(log(n))` | 
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/b_tree.rb) | [Read implementation steps](http://www.brpreiss.com/books/opus8/html/page339.html)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/b_tree.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page339.html)
 
 #### 二叉堆
 
 A binary heap is a heap-ordered complete binary tree which is implemented using an array. In a heap the smallest key is found at the root and since the root is always found in the first position of the array, finding the smallest key is a trivial operation in a binary heap.
 
-| Structure | Average Access | Average Search | Average Insertion | Average Deletion | Worst Access | Worst Search | Worst Insertion | Worst Deletion |
+| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-[Binary Heap](https://en.wikipedia.org/wiki/Binary_heap) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `O(log(n))` | `O(n)` | `O(n))` | `O(log(n))` | `O(log(n))` | 
+[二叉堆](https://en.wikipedia.org/wiki/Binary_heap) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `O(log(n))` | `O(n)` | `O(n))` | `O(log(n))` | `O(log(n))` | 
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/binary_heap.rb) | [Read implementation steps] (http://www.brpreiss.com/books/opus8/html/page355.html)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/binary_heap.rb) | [实现步骤] (http://www.brpreiss.com/books/opus8/html/page355.html)
 
 #### Code and articles were taken from resources:
 
@@ -568,33 +568,33 @@ A sorting algorithm is an algorithm that puts elements of a list in a certain or
 
 Bubble sort has many of the same properties as insertion sort, but has slightly higher overhead. In the case of nearly sorted data, bubble sort takes O(n) time, but requires at least 2 passes through the data (whereas insertion sort requires something more like 1 pass).
 
-| Best | Average | Worst |
+| 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
 | `Ω(n)` | `Θ(n^2)` | `O(n^2)` |
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/bubble.rb) | [Read wiki](https://en.wikipedia.org/wiki/Bubble_sort)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/bubble.rb) | [维基百科](https://en.wikipedia.org/wiki/Bubble_sort)
 
 #### 插入排序
 
 Although it is one of the elementary sorting algorithms with O(n2) worst-case time, insertion sort is the algorithm of choice either when the data is nearly sorted (because it is adaptive) or when the problem size is small (because it has low overhead).
 For these reasons, and because it is also stable, insertion sort is often used as the recursive base case (when the problem size is small) for higher overhead divide-and-conquer sorting algorithms, such as merge sort or quick sort
 
-| Best | Average | Worst |
+| 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
 | `Ω(n)` | `Θ(n^2)` | `O(n^2)` |
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/insertion.rb) | [Read wiki](https://en.wikipedia.org/wiki/Insertion_sort)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/insertion.rb) | [维基百科](https://en.wikipedia.org/wiki/Insertion_sort)
 
 #### 选择排序
 
 From the comparions presented here, one might conclude that selection sort should never be used. It does not adapt to the data in any way (notice that the four animations above run in lock step), so its runtime is always quadratic.
 However, selection sort has the property of minimizing the number of swaps. In applications where the cost of swapping items is high, selection sort very well may be the algorithm of choice.
 
-| Best | Average | Worst |
+| 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
 | `Ω(n^2)` | `Θ(n^2)` | `O(n^2)` |
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/selection.rb) | [Read wiki](https://en.wikipedia.org/wiki/Selection_sort)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/selection.rb) | [维基百科](https://en.wikipedia.org/wiki/Selection_sort)
 
 #### 希尔排序
 
@@ -602,11 +602,11 @@ The worse-case time complexity of shell sort depends on the increment sequence. 
 Because shell sort is based on insertion sort, shell sort inherits insertion sort’s adaptive properties. The adapation is not as dramatic because shell sort requires one pass through the data for each increment, but it is significant. For the increment sequence shown above, there are log3(n) increments, so the time complexity for nearly sorted data is O(n·log3(n)).
 Because of its low overhead, relatively simple implementation, adaptive properties, and sub-quadratic time complexity, shell sort may be a viable alternative to the O(n·lg(n)) sorting algorithms for some applications when the data to be sorted is not very large.
 
-| Best | Average | Worst |
+| 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
 | `Ω(n log(n))` | `Θ(n(log(n))^2)` | `O(n(log(n))^2)` |
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/shell.rb) | [Read wiki](https://en.wikipedia.org/wiki/Shellsort)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/shell.rb) | [维基百科](https://en.wikipedia.org/wiki/Shellsort)
 
 #### 堆排序
 
@@ -615,11 +615,11 @@ The first loop, the Θ(n) “heapify” phase, puts the array into heap order. T
 The sink function is written recursively for clarity. Thus, as shown, the code requires Θ(lg(n)) space for the recursive call stack. However, the tail recursion in sink() is easily converted to iteration, which yields the O(1) space bound.
 Both phases are slightly adaptive, though not in any particularly useful manner. In the nearly sorted case, the heapify phase destroys the original order. In the reversed case, the heapify phase is as fast as possible since the array starts in heap order, but then the sortdown phase is typical. In the few unique keys case, there is some speedup but not as much as in shell sort or 3-way quicksort.
 
-| Best | Average | Worst |
+| 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
 | `Ω(n log(n))` | `Θ(n log(n))` | `O(n log(n))` |
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/heap.rb) | [Read wiki](https://en.wikipedia.org/wiki/Heapsort)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/heap.rb) | [维基百科](https://en.wikipedia.org/wiki/Heapsort)
 
 #### 归并排序
 
@@ -627,11 +627,11 @@ Merge sort is very predictable. It makes between 0.5lg(n) and lg(n) comparisons 
 Merge sort is the algorithm of choice for a variety of situations: when stability is required, when sorting linked lists, and when random access is much more expensive than sequential access (for example, external sorting on tape).
 There do exist linear time in-place merge algorithms for the last step of the algorithm, but they are both expensive and complex. The complexity is justified for applications such as external sorting when Θ(n) extra space is not available.
 
-| Best | Average | Worst |
+| 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
 | `Ω(n log(n))` | `Θ(n log(n))` | `O(n log(n))` | 
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/merge.rb) | [Read wiki](https://en.wikipedia.org/wiki/Merge_sort)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/merge.rb) | [维基百科](https://en.wikipedia.org/wiki/Merge_sort)
 
 #### 快速排序
 
@@ -639,11 +639,11 @@ When carefully implemented, quick sort is robust and has low overhead. When a st
 The 2-way partitioning code shown above is written for clarity rather than optimal performance; it exhibits poor locality, and, critically, exhibits O(n2) time when there are few unique keys. A more efficient and robust 2-way partitioning method is given in Quicksort is Optimal by Robert Sedgewick and Jon Bentley. The robust partitioning produces balanced recursion when there are many values equal to the pivot, yielding probabilistic guarantees of O(n·lg(n)) time and O(lg(n)) space for all inputs.
 With both sub-sorts performed recursively, quick sort requires O(n) extra space for the recursion stack in the worst case when recursion is not balanced. This is exceedingly unlikely to occur, but it can be avoided by sorting the smaller sub-array recursively first; the second sub-array sort is a tail recursive call, which may be done with iteration instead. With this optimization, the algorithm uses O(lg(n)) extra space in the worst case.
 
-| Best | Average | Worst |
+| 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
 | `Ω(n log(n))` | `Θ(n log(n))` | `O(n^2)` |
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/quick.rb) | [Read wiki](https://en.wikipedia.org/wiki/Quicksort)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/quick.rb) | [维基百科](https://en.wikipedia.org/wiki/Quicksort)
 
 #### Other sorting algorithms
 
@@ -661,17 +661,17 @@ With both sub-sorts performed recursively, quick sort requires O(n) extra space 
 
 In computer science, binary search, also known as half-interval search or logarithmic search, is a search algorithm that finds the position of a target value within a sorted array. It compares the target value to the middle element of the array; if they are unequal, the half in which the target cannot lie is eliminated and the search continues on the remaining half until it is successful.
 
-| Best | Average | Worst |
+| 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
 | `Θ(1)` | `Θ(n log(n))` | `O(log(n))` |
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/search/binary.rb) | [Read wiki](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/search/binary.rb) | [维基百科](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)
 
 #### KMP查找
 
 In computer science, the Knuth–Morris–Pratt string searching algorithm (or KMP algorithm) searches for occurrences of a "word" W within a main "text string" S by employing the observation that when a mismatch occurs, the word itself embodies sufficient information to determine where the next match could begin, thus bypassing re-examination of previously matched characters.
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/knuth-morris-pratt.rb) | [Read wiki](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/knuth-morris-pratt.rb) | [维基百科](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
 #### Other search algorithms
 
