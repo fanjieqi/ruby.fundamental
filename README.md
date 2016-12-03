@@ -429,7 +429,7 @@ The running time performance of the common language runtime is given by a set of
 
 The stack is the sibling of the queue. It mimicks a real-life stack (e.g. of paper). It is FILO (first-in-last-out), so that when items are retrieved from the stack, they are returned in the reverse of the order in which they were added. Again, Ruby Arrays provide a perfect container. As with the Queue, it could also be implemented using a linked list.
 
-| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
+| 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [栈](http://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
@@ -441,7 +441,7 @@ The stack is the sibling of the queue. It mimicks a real-life stack (e.g. of pap
 
 A queue is a simple container-based structure that mimics a real-life queue (e.g. waiting in line at the bank). It is FIFO (first-in-first-out), meaning that when you retrieve items from the queue, they are returned in the order in which they entered. Ruby Arrays provide methods that make Queue implementation trivially easy, but having them named appropriately and contained in a convenience class is worth it to see how they are implemented, and because other structures will inherit from this one. An alternate implementation could be done using a linked list.
 
-| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
+| 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [队](http://en.wikipedia.org/wiki/Queue_(abstract_data_type)) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
@@ -453,7 +453,7 @@ A queue is a simple container-based structure that mimics a real-life queue (e.g
 
 A Deque is a queue which allows adding and removing items at both ends.
 
-| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
+| 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [双端队列](https://en.wikipedia.org/wiki/Double-ended_queue) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
@@ -465,7 +465,7 @@ A Deque is a queue which allows adding and removing items at both ends.
 
 Singly linked lists contain nodes which have a data field as well as a 'next' field, which points to the next node in line of nodes. Operations that can be performed on singly linked lists include insertion, deletion and traversal.
 
-| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | 删除最坏复杂度 |
+| 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [单向链表](http://en.wikipedia.org/wiki/Singly_linked_list#Singly_linked_lists) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
@@ -475,7 +475,7 @@ Singly linked lists contain nodes which have a data field as well as a 'next' fi
 
 In a doubly-linked list , each list element contains two references--one to its successor and one to its predecessor. 
 
-| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
+| 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [双向链表](http://en.wikipedia.org/wiki/Doubly_linked_list) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` | 
 
@@ -485,7 +485,7 @@ In a doubly-linked list , each list element contains two references--one to its 
  
 An ordered list is a list in which the order of the items is significant. However, the items in an ordered lists are not necessarily sorted. Consequently, it is possible to change the order of items and still have a valid ordered list.
 
-| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
+| 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 有序列表(数组) |`Θ(1)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(1)` | `O(n)` | `O(1)` | `O(1)` |
 有序列表(链表) |`Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
@@ -498,7 +498,7 @@ An ordered list is a list in which the order of the items is significant. Howeve
 
 A hash table  is a searchable container. As such, it provides methods for putting an object into the container, finding an object in the container, and removing an object from the container.
 
-| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
+| 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [哈表表](http://en.wikipedia.org/wiki/Hash_table) | `Θ(n)` | `Θ(1)` | `Θ(1)` | `Θ(1)` | `Θ(n)` | `O(n)` | `O(n)` | `O(n)` |
 
@@ -508,7 +508,7 @@ A hash table  is a searchable container. As such, it provides methods for puttin
 
 A binary tree is a tree in which each node can have a maximum of two children. The children are designated left and right. 
 
-| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
+| 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [二叉树](https://en.wikipedia.org/wiki/Binary_tree) | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `O(n)` | `O(n)` | `O(n)` | `O(n)` |
 
@@ -518,7 +518,7 @@ A binary tree is a tree in which each node can have a maximum of two children. T
 
 In computer science, binary search trees (BST), sometimes called ordered or sorted binary trees, are a particular type of containers: data structures that store "items" (such as numbers, names etc.) in memory. They allow fast lookup, addition and removal of items, and can be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., finding the phone number of a person by name)
 
-| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
+| 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [二叉查找树](http://en.wikipedia.org/wiki/Binary_search_tree) | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `O(n)` | `O(n)` | `O(n)` | `O(n)` |
 
@@ -528,7 +528,7 @@ In computer science, binary search trees (BST), sometimes called ordered or sort
 
 In computer science, a B-tree is a self-balancing tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree is a generalization of a binary search tree in that a node can have more than two children (Comer . Unlike self-balancing binary search trees, the B-tree is optimized for systems that read and write large blocks of data. B-trees are a good example of a data structure for external memory. It is commonly used in databases and filesystems.
 
-| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
+| 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [B树](http://en.wikipedia.org/wiki/B_tree) | `Θ(log(n))` | `Θ(log(n))` | `Θ(log(n))` | `O(log(n))` | `O(log(n))` | `O(log(n))` | `O(log(n))` | `O(log(n))` | 
 
@@ -538,7 +538,7 @@ In computer science, a B-tree is a self-balancing tree data structure that keeps
 
 A binary heap is a heap-ordered complete binary tree which is implemented using an array. In a heap the smallest key is found at the root and since the root is always found in the first position of the array, finding the smallest key is a trivial operation in a binary heap.
 
-| 数据结构 | 访问平均复杂度 | 查找平均复杂度 | 插入平均复杂度 | 删除平均复杂度 | 访问最坏复杂度 | 查找最坏复杂度 | 插入最坏复杂度 | Worst Deletion |
+| 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [二叉堆](https://en.wikipedia.org/wiki/Binary_heap) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `O(log(n))` | `O(n)` | `O(n))` | `O(log(n))` | `O(log(n))` | 
 
