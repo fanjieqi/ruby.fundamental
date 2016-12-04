@@ -401,7 +401,7 @@ In computer science, big O notation is used to classify algorithms by how they r
 
 The running time performance of the common language runtime is given by a set of axioms which we shall now postulate.
 
-[See description with examples](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/axioms.rb)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/axioms.rb)
 
 #### 代码及文献资源:
 
@@ -433,9 +433,9 @@ The stack is the sibling of the queue. It mimicks a real-life stack (e.g. of pap
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [栈](http://en.wikipedia.org/wiki/Stack_(abstract_data_type)) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
-[See stack as array example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/stack_as_array.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page131.html)
+[栈(数组) - 示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/stack_as_array.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page131.html)
 
-[See stack as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/stack_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page137.html)
+[栈(链表) - 示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/stack_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page137.html)
 
 #### 队列
 
@@ -443,11 +443,11 @@ A queue is a simple container-based structure that mimics a real-life queue (e.g
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-[队](http://en.wikipedia.org/wiki/Queue_(abstract_data_type)) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
+[队列](http://en.wikipedia.org/wiki/Queue_(abstract_data_type)) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
-[See queue as array example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/queue_as_array.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page147.html)
+[队列(数组) - 示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/queue_as_array.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page147.html)
 
-[See queue as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/queue_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page151.html)
+[队列(链表) - 示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/queue_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page151.html)
 
 #### 双端队列
 
@@ -457,9 +457,9 @@ A Deque is a queue which allows adding and removing items at both ends.
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [双端队列](https://en.wikipedia.org/wiki/Double-ended_queue) | `Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
-[See queue as array example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/deque_as_array.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page158.html)
+[双端队列(数组) - 示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/deque_as_array.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page158.html)
 
-[See queue as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/deque_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page161.html)
+[双端队列(链表) - 示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/deque_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page161.html)
 
 #### 单向链表
 
@@ -490,9 +490,9 @@ An ordered list is a list in which the order of the items is significant. Howeve
 有序列表(数组) |`Θ(1)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(1)` | `O(n)` | `O(1)` | `O(1)` |
 有序列表(链表) |`Θ(n)` | `Θ(n)` | `Θ(1)` | `Θ(1)` | `O(n)` | `O(n)` | `O(1)` | `O(1)` |
 
-[See ordered list as array example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/ordered_list_as_array.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page169.html)
+[有序列表(数组) - 示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/ordered_list_as_array.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page169.html)
 
-[See ordered list as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/ordered_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page178.html)
+[有序列表(链表) - 示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/ordered_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page178.html)
 
 #### 哈希表
 
@@ -502,7 +502,7 @@ A hash table  is a searchable container. As such, it provides methods for puttin
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
 [哈希表](http://en.wikipedia.org/wiki/Hash_table) | `Θ(n)` | `Θ(1)` | `Θ(1)` | `Θ(1)` | `Θ(n)` | `O(n)` | `O(n)` | `O(n)` |
 
-[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/hash_table.rb) | [Rad implementation steps](http://www.brpreiss.com/books/opus8/html/page222.html)
+[示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/hash_table.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page222.html)
 
 #### 二叉树
 
