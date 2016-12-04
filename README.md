@@ -494,13 +494,13 @@ An ordered list is a list in which the order of the items is significant. Howeve
 
 [See ordered list as linked list example](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/ordered_as_linked_list.rb) | [实现步骤](http://www.brpreiss.com/books/opus8/html/page178.html)
 
-#### 哈表表
+#### 哈希表
 
 A hash table  is a searchable container. As such, it provides methods for putting an object into the container, finding an object in the container, and removing an object from the container.
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
-[哈表表](http://en.wikipedia.org/wiki/Hash_table) | `Θ(n)` | `Θ(1)` | `Θ(1)` | `Θ(1)` | `Θ(n)` | `O(n)` | `O(n)` | `O(n)` |
+[哈希表](http://en.wikipedia.org/wiki/Hash_table) | `Θ(n)` | `Θ(1)` | `Θ(1)` | `Θ(1)` | `Θ(n)` | `O(n)` | `O(n)` | `O(n)` |
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/hash_table.rb) | [Rad implementation steps](http://www.brpreiss.com/books/opus8/html/page222.html)
 
