@@ -123,7 +123,7 @@ The problem with this is that there is no simple way to say with absolute certai
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/threads/rails.rb)
 
-#### Code and articles were taken from resources:
+#### 代码及文献资源:
 
 * [http://www.jstorimer.com/blogs/workingwithcode/8085491-nobody-understands-the-gil](http://www.jstorimer.com/blogs/workingwithcode/8085491-nobody-understands-the-gil)
 
@@ -174,7 +174,7 @@ One should Depend upon Abstractions, Do not depend upon concretions.
 
 Refers to a specific form of decoupling software modules. When following this principle, the conventional dependency relationships established from high-level, policy-setting modules to low-level, dependency modules are inverted (i.e. reversed), thus rendering high-level modules independent of the low-level module implementation details. 
 
-####Code and articles were taken from resources:
+####代码及文献资源:
 
 * [https://gist.github.com/khusnetdinov/9d8f50fdcaab197871b31578f2e14d5d](https://gist.github.com/khusnetdinov/9d8f50fdcaab197871b31578f2e14d5d) 
 
@@ -379,7 +379,7 @@ In essence, the visitor allows one to add new virtual functions to a family of c
 
 * [Hierarchical visitor](http://c2.com/cgi/wiki?HierarchicalVisitorPattern)
 
-#### Code and articles were taken from resources:
+#### 代码及文献资源:
 
 * [https://ru.wikipedia.org/wiki/Design_Patterns](https://ru.wikipedia.org/wiki/Design_Patterns)
 
@@ -403,7 +403,7 @@ The running time performance of the common language runtime is given by a set of
 
 [See description with examples](https://github.com/khusnetdinov/ruby.fundamental/blob/master/structures/axioms.rb)
 
-#### Code and articles were taken from resources:
+#### 代码及文献资源:
 
 * [Axioms](http://www.brpreiss.com/books/opus8/html/page37.html)
 
@@ -544,7 +544,7 @@ A binary heap is a heap-ordered complete binary tree which is implemented using 
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/binary_heap.rb) | [实现步骤] (http://www.brpreiss.com/books/opus8/html/page355.html)
 
-#### Code and articles were taken from resources:
+#### 代码及文献资源:
 
 * [https://github.com/blahah/datastructures](https://github.com/blahah/datastructures)
 
@@ -685,7 +685,7 @@ In computer science, the Knuth–Morris–Pratt string searching algorithm (or K
 
 * [Telephone number to words](http://www.mobilefish.com/services/phonenumber_words/phonenumber_words.php)
 
-#### Code and articles were taken from resources:
+#### 代码及文献资源:
 
 * [https://github.com/sagivo/algorithms](https://github.com/sagivo/algorithms)
 
