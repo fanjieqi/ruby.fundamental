@@ -645,7 +645,7 @@ With both sub-sorts performed recursively, quick sort requires O(n) extra space 
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/quick.rb) | [维基百科](https://en.wikipedia.org/wiki/Quicksort)
 
-#### Other sorting algorithms
+#### 其它排序算法
 
 * [http://rosettacode.org/wiki/Category:Sorting_Algorithms](http://rosettacode.org/wiki/Category:Sorting_Algorithms)
 
@@ -673,17 +673,15 @@ In computer science, the Knuth–Morris–Pratt string searching algorithm (or K
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/knuth-morris-pratt.rb) | [维基百科](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
-#### Other search algorithms
+#### 其它算法
 
-* [Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+* [Dijkstra算法](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 
-* [Kruskal's algorithm](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)
+* [Kruskal算法](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)
 
-* [Kruskal's algorithm](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm)
+* [最长上升子序列](https://en.wikipedia.org/wiki/Longest_increasing_subsequence)
 
-* [Longest increasing subsequence](https://en.wikipedia.org/wiki/Longest_increasing_subsequence)
-
-* [Telephone number to words](http://www.mobilefish.com/services/phonenumber_words/phonenumber_words.php)
+* [电话号码对应英语单词](http://www.mobilefish.com/services/phonenumber_words/phonenumber_words.php)
 
 #### 代码及文献资源:
 
