@@ -225,17 +225,17 @@ Ensure a class only has one instance, and provide a global point of access to it
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/singleton.rb) | [维基百科](https://en.wikipedia.org/wiki/Singleton_pattern)
 
-#### Not covered patterns:
+#### 其它模式:
 
-* [Lazy initialization](https://en.wikipedia.org/wiki/Lazy_initialization)
+* [惰性初始模式](https://en.wikipedia.org/wiki/Lazy_initialization)
 
-* [Multiton](https://en.wikipedia.org/wiki/Multiton_pattern)
+* [多例模式](https://en.wikipedia.org/wiki/Multiton_pattern)
 
-* [Object pool](https://en.wikipedia.org/wiki/Object_pool_pattern)
+* [对象池](https://en.wikipedia.org/wiki/Object_pool_pattern)
 
-* [Resource acquisition is initialization](https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization)
+* [RAII](https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization)
 
-* [Utility](https://en.wikipedia.org/wiki/Utility_pattern)
+* [效用模式](https://en.wikipedia.org/wiki/Utility_pattern)
 
 ### 结构型模式
 
@@ -279,15 +279,15 @@ A proxy, in its most general form, is a class functioning as an interface to som
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/proxy.rb) | [维基百科](https://en.wikipedia.org/wiki/Proxy_pattern)
 
-#### Not covered patterns:
+#### 其它模式:
 
-* [Annotated Callback](http://c2.com/cgi/wiki?AnnotatedCallback)
+* [注释回调](http://c2.com/cgi/wiki?AnnotatedCallback)
 
-* [Bridge](https://en.wikipedia.org/wiki/Bridge_pattern)
+* [桥接模式](https://en.wikipedia.org/wiki/Bridge_pattern)
 
-* [Data Bus](http://c2.com/cgi/wiki?DataBusPattern)
+* [数据总线模式](http://c2.com/cgi/wiki?DataBusPattern)
 
-* [Role Object](http://c2.com/cgi/wiki?RoleObjectPattern)
+* [角色对象模式](http://c2.com/cgi/wiki?RoleObjectPattern)
 
 ### 行为型模式 
 
@@ -375,9 +375,9 @@ In essence, the visitor allows one to add new virtual functions to a family of c
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/visitor.rb) | [维基百科](https://en.wikipedia.org/wiki/Visitor_pattern)
 
-#### Not covered patterns:
+#### 其它模式:
 
-* [Hierarchical visitor](http://c2.com/cgi/wiki?HierarchicalVisitorPattern)
+* [访问者模式](http://c2.com/cgi/wiki?HierarchicalVisitorPattern)
 
 #### 代码及文献资源:
 
