@@ -71,11 +71,11 @@
 
 ## 线程
 
-Note about parallelism and concurrency: The primary difference between using processes versus threads is the way that memory is handled. At a high level, processes copy memory, while threads share memory. This makes process spawning slower than thread spawning, and leads to processes consuming more resources once running. Overall, threads incur less overhead than processes. This Thread API is a Ruby API. I've hinted that the different Ruby implementations have different underlying threading behaviours.
+需注意并行性和并发性：两者主要区别在于操作内存是使用进程还是线程。进一步说，进程会复制一份内存，而线程会分享内存。 这使得进程的产生比线程产生得慢，并且导致了进程一旦运行会消耗更多的资源。总的来说，线程相比进程引发的费用少。这个线程API是一个Ruby的API。我已经暗示了不同的Ruby实现有着不同的潜在线程行为。
 
 #### 绿色线程
 
-Ruby 1.9 replaced green threads with native threads. However, the GIL is still preventing parallelism. That being said, concurrency has been improved through better scheduling. The new scheduler makes context-switch decisions more efficient, by essentially moving them to a separate native thread, known as the timer thread.
+Ruby 1.9 用本地线程替换掉了绿色线程。然而，全局解释器锁依然妨碍了并行性。话虽如此，并发已通过更好的调度改进来获得了提升。 新的调度器通过将“上下文切换决策”实质上地弄为单独的本地线程（称为定时器线程），使其更加有效率。
 
 #### 全局解释器锁
 
