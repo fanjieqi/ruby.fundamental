@@ -79,11 +79,11 @@ Ruby 1.9 用本地线程替换掉了绿色线程。然而，全局解释器锁�
 
 #### 全局解释器锁
 
-MRI has a global interpreter lock (GIL). It's a lock around the execution of Ruby code. This means that in a multi-threaded context, only one thread can execute Ruby code at any one time.
+MRI有一个围绕着Ruby代码执行的全局解释器锁（GIL）。意味着在多线程上下文中，在任意时刻只有一个线程可以执行Ruby代码。
 
-So if you have 8 threads busily working on a 8-core machine, only one thread and one core will be busy at any given time. The GIL exists to protect Ruby internals from race conditions that could corrupt data. There are caveats and optimizations, but this is the gist.
+因此如果在一个8核的机器上你有8个线程在忙碌着，在任何给定的时间只有一个线程核一个核在工作。竞争条件会毁坏数据，GIL的存在是为了保护Ruby内部不受其影响。虽说GIL有很多警告和优化，但是这才是要旨。
 
-This has some very important implications for MRI. The biggest implication is that Ruby code will never run in parallel on MRI. The GIL prevents it.
+这对于MRI有着很多非常重要的影响，最大的影响在于GIL阻止了Ruby代码在MRI上并行运行。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/threads/gil.rb)
 
