@@ -103,23 +103,24 @@ Mutex是mutual exclusion（相互排斥）的缩写。如果你把你的代码�
 
 #### Rails的线程安全
 
-The problem with this is that there is no simple way to say with absolute certainty whether an app as a whole is thread-safe.
+Rails的线程安全问题在于没有一种简单的方式能绝对确定一个应用程序作为一个整体是线程安全的。
 
-* Global variables are global. This means that they are shared between threads. If you weren’t convinced about not using global variables by now, here’s another reason to never touch them. If you really want to share something globally across an app, you are more than likely better served by a constant (but see below), anyway.
+* 全局变量是全局的，这意味着在线程种他们是分享的。到目前为止，如果你不能确信是否要使用全局变量，这有着其它原因来说明不要去触碰它。如果你真的需要在一个程序应用中分享一些全局内容，不管怎样，你最好还是用常量来伺候（往下看）。
 
-* Class variables. For the purpose of a discussion about threads, class variables are not much different from global variables. They are shared across threads just the same way.The problem isn’t so much about using class variables, but about mutating them. And if you are not going to mutate a class variable, in many cases a constant is again a better choice.
+* 类变量，对于讨论线程的目的，类变量和全局变量没多大区别。类变量一样是在线程中进行分享。问题不在于使用类变量，而是在于改变他们。如果你不准备改变类变量，大多数情况下常量是一个更好的选择。
 
-* Class instance variables. But maybe you’ve read that you should always use class instance variables instead of class variables in Ruby. Well, maybe you should, but they are just as problematic for threaded programs as class variables.
+* 实例变量，在Ruby中，或许你已经了解到你应该总是使用实例变量而不是类变量。好吧，或许你应该如此，但是和类变量一样，他们在线程程序中也是有问题的。
 
-* Memoization by itself is not a thread safety issue. However, it can easily become one for a couple of reasons:
 
-  - It is often used to store data in class variables or class instance variables (see the previous points).
-  - The ||= operator is in fact two operations, so there is a potential context switch happening in the middle of it, causing a race condition between threads.
-  - It would be easy to dismiss memoization as the cause of the problem, and tell people just to avoid class variables and class instance variables. However, the issue is more complex than that.
-  - In this issue, Evan Phoenix squashes a really tricky race condition bug in the Rails codebase caused by calling super in a memoization function. So even though you would only be using instance variables, you might end up with race conditions with memoization.
+* 记忆化函数本身不是一个线程安全的问题，然而，由于一些原因它很容易成为一个问题：
+  
+  - 它时常习惯于在类变量或者实例变量中存储数据（看前面）
+  - ||=操作符实际上是两个操作，所以在其中可能存在上下文切换，造成线程间的竞争冒险。
+  - 很容易忽略记忆化函数也能造成线程安全问题，并且告诉人们只需要避免类变量和实例变量。然后，问题比那个复杂。
+  - 在这个线程安全问题上，Evan Phoenix在Rails代码库种挤入了一个非常棘手的竞争冒险错误，这个错误是在记忆化函数调用上一层出现的。所以即便你只使用实例变量，你也会在记忆化函数中以竞争冒险结束。
 
-  Make sure memoization makes sense and a difference in your case. In many cases Rails actually caches the result anyway, so that you are not saving a whole lot if any resources with your memoization method.
-  Don’t memoize to class variables or class instance variables. If you need to memoize something on the class level, use thread local variables (Thread.current[:baz]) instead. Be aware, though, that it is still kind of a global variable. So while it’s thread-safe, it still might not be good coding practice.
+  确保记忆化在你的例子中函数有意义、起作用。在很多例子中，不管怎样，Rails实际上缓存了结果，所以你不是用记忆化方法存了一整个资源。不要记忆类变量或者实例变量。如果你需要记忆类一级别的东西，用线程中的局部变量 （Thread.current[:baz]）即可。注意，虽然如此，那也是某种意义上的全局变量。所以虽然这是线程安全的，但仍旧不是良好的编程实践。
+
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/threads/rails.rb)
 
