@@ -71,7 +71,7 @@
 
 ## 线程
 
-Note about parallelism and concurrency: The primary difference between using processes versus threads is the way that memory is handled. At a high level, processes copy memory, while threads share memory. This makes process spawning slower than thread spawning, and leads to processes consuming more resources once running. Overall, threads incur less overhead than processes. This Thread API is a Ruby API. I've hinted that the different Ruby implementations have different underlying threading behaviours.
+需注意并行性和并发性：两者主要区别在于操作内存是使用进程还是线程。进一步说，进程会复制一份内存，而线程会分享内存。 这使得进程的产生比线程产生得慢，并且导致了进程一旦运行会消耗更多的资源。总的来说，线程相比进程引发的费用少。这个线程API是一个Ruby的API。我已经暗示了不同的Ruby实现有着不同的潜在线程行为。
 
 #### 绿色线程
 
