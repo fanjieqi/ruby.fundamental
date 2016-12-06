@@ -97,7 +97,7 @@ Mutex是mutual exclusion（相互排斥）的缩写。如果你把你的代码�
 
 #### 纤程
 
-Fibers are primitives for implementing light weight cooperative concurrency in Ruby. Basically they are a means of creating code blocks that can be paused and resumed, much like threads. The main difference is that they are never preempted and that the scheduling must be done by the programmer and not the VM. As opposed to other stackless light weight concurrency models, each fiber comes with a small 4KB stack. This enables the fiber to be paused from deeply nested function calls within the fiber block.
+在Ruby中，纤程是实现轻量协作并发的基元。基本上，纤程是一套创造可暂停、恢复的代码块的手段。主要的差异在于纤程从不被强占，调度器只能由程序员完成而不是VM。与其他无堆栈轻量级并发模型不同，每个纤程都有一个小小的4KB堆栈。这使得纤程能够在纤程块内被深度嵌套的函数调用暂停。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/threads/fibers.rb)
 
