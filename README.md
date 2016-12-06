@@ -89,9 +89,9 @@ MRI有一个围绕着Ruby代码执行的全局解释器锁（GIL）。意味着�
 
 #### 互斥锁
 
-Mutexes provide a mechanism for multiple threads to synchronize access to a critical portion of code. In other words, they help bring some order, and some guarantees, to the world of multi-threaded chaos.
+互斥锁给多线程能同步访问代码中的重要部分提供了一种机制。换句话说，互斥锁给多线程的混乱世界带了秩序和保证。
 
-The name 'mutex' is shorthand for 'mutual exclusion.' If you wrap some section of your code with a mutex, you guarantee that no two threads can enter that section at the same time.
+Mutex是mutual exclusion（相互排斥）的缩写。如果你把你的代码用互斥锁括起来，就能保证没有两个线程能在同一时刻进入那段代码。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/threads/mutex.rb)
 
