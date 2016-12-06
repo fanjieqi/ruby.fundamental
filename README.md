@@ -75,7 +75,7 @@
 
 #### 绿色线程
 
-Ruby 1.9 replaced green threads with native threads. However, the GIL is still preventing parallelism. That being said, concurrency has been improved through better scheduling. The new scheduler makes context-switch decisions more efficient, by essentially moving them to a separate native thread, known as the timer thread.
+Ruby 1.9 用本地线程替换掉了绿色线程。然而，全局解释器锁依然妨碍了并行性。话虽如此，并发已通过更好的调度改进来获得了提升。 新的调度器通过将“上下文切换决策”实质上地弄为单独的本地线程（称为定时器线程），使其更加有效率。
 
 #### 全局解释器锁
 
