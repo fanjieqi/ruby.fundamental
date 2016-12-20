@@ -13,8 +13,8 @@
     - [单一职责原则](#单一职责原则)
     - [开放封闭原则](#开放封闭原则)
     - [里氏替换原则](#里氏替换原则)
-    - [接口分离原则](#接口分离原则)
-    - [依赖倒置原则](#依赖倒置原则)
+    - [接口隔离原则](#接口隔离原则)
+    - [依赖反转原则](#依赖反转原则)
   - [设计模式](#设计模式)
     - [创建型模式](#创建型模式)
       - [抽象工厂模式](#抽象工厂模式)
@@ -121,7 +121,6 @@ Rails的线程安全问题在于没有一种简单的方式能绝对确定一个
 
   确保记忆化在你的例子中函数有意义、起作用。在很多例子中，不管怎样，Rails实际上缓存了结果，所以你不是用记忆化方法存了一整个资源。不要记忆类变量或者实例变量。如果你需要记忆类一级别的东西，用线程中的局部变量 （Thread.current[:baz]）即可。注意，虽然如此，那也是某种意义上的全局变量。所以虽然这是线程安全的，但仍旧不是良好的编程实践。
 
-
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/threads/rails.rb)
 
 #### 代码及文献资源:
@@ -134,21 +133,21 @@ Rails的线程安全问题在于没有一种简单的方式能绝对确定一个
 
 ## SOLID原则
 
-In computer programming, SOLID (single responsibility, open-closed, Liskov substitution, interface segregation and dependency inversion) is a mnemonic acronym introduced by Michael Feathers for the "first five principles" named by Robert C. Martin in the early 2000s that stands for five basic principles of object-oriented programming and design. The intention is that these principles, when applied together, will make it more likely that a programmer will create a system that is easy to maintain and extend over time. The principles of SOLID are guidelines that can be applied while working on software to remove code smells by causing the programmer to refactor the software's source code until it is both legible and extensible. It is part of an overall strategy of agile and Adaptive Software Development.
+在计算机编程领域，SOLID原则是一个由Michael Feathers介绍引入、由Robert C. Martin在21世纪早期命名的“五个首要原则”的记忆术首字母缩写词，其代表了五个关于面向对象编程与设计的五个基本原则，包括单一职责、开闭原则、里氏替换、接口隔离以及依赖反转。这些原则的目的在于，当他们一起应用时，将会使得程序员更容易创造一个容易维护和随时间扩展的系统。SOLID的原则是可以应用于在编写软件过程中去除代码异味的指导原则，通过程序员重构软件的源代码，直到它是清晰可读的和可扩展的。它是软件敏捷、自适应开发的全部战略中的一部分。
 
 #### 单一职责原则
 
-A class should have only a single responsibility.
+一个类应该只有一个职责。
 
-Every class should have a single responsibility, and that responsibility should be entirely encapsulated.
-All its services should be narrowly aligned with that responsibility, this embrace the high cohesion.
+每个类应该只有一个职责，并且这一职责应该完全封装起来。
+它的所有服务应该与这一责任紧密相连，这包括了高凝聚。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/solid/single_responsibility.rb)
 
 #### 开放封闭原则
 
-Software entities should be open for extension, but closed for modification.
-That is, such an entity can allow its behaviour to be extended without modifying its source code.
+软件实体应该为了扩展而开放，但是为了修改而关闭。
+也就是说，这样的实体可以允许其行为被扩展而不修改其源代码。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/solid/open_close.rb)
 
@@ -159,21 +158,21 @@ It states that, in a computer program, if S is a subtype of T, then objects of t
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/solid/liskov_substitution.rb)
 
-#### 接口分离原则
+#### 接口隔离原则
 
-Many client-specific interfaces are better than one general-purpose interface.
+多个客户端特定接口比单一通用接口更好。
 
-States that no client should be forced to depend on methods it does not use.
-ISP splits interfaces which are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them. Such shrunken interfaces are also called role interfaces. 
-ISP is intended to keep a system decoupled and thus easier to refactor, change, and redeploy.
+任何客户都不应该被迫依赖于它不使用的方法。
+ISP将非常大的接口分割成更小和更具体的接口，使得客户端将只需要知道他们感兴趣的方法。 这种缩小的接口也称为角色接口。
+ISP旨在保持系统解耦，从而更容易重构，更改和重新部署。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/solid/interface_segregation.rb)
 
-####依赖倒置原则
+####依赖反转原则
 
-One should Depend upon Abstractions, Do not depend upon concretions.
+应该依赖于抽象，而非依赖于具体的结构。
 
-Refers to a specific form of decoupling software modules. When following this principle, the conventional dependency relationships established from high-level, policy-setting modules to low-level, dependency modules are inverted (i.e. reversed), thus rendering high-level modules independent of the low-level module implementation details. 
+指的是将软件模块去耦的特定形式。 当遵循该原理时，从高级策略设置模块到低级，依赖性模块建立的常规依赖关系被反转（即颠倒），从而使高级模块独立于低级模块实现细节。
 
 ####代码及文献资源:
 
