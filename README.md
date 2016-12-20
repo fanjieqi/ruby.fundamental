@@ -188,40 +188,40 @@ ISP旨在保持系统解耦，从而更容易重构，更改和重新部署。
 
 ### 创建型模式
 
-In software engineering, creational design patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form of object creation could result in design problems or in added complexity to the design. Creational design patterns solve this problem by somehow controlling this object creation. Creational design patterns are composed of two dominant ideas. One is encapsulating knowledge about which concrete classes the system uses. Another is hiding how instances of these concrete classes are created and combined.
+在软件工程中，创建型设计模式是处理对象创建机制的设计模式，试图以适应情势的方式创建对象。 对象创建的基本形式可能导致设计问题或增加设计的复杂性。 创建型设计模式通过某种方式控制这个对象创建来解决这个问题。 创建型设计模式由两个主导思想组成。 一个是封装关于系统使用哪个具体类的知识。 另一个是隐藏这些具体类的实例是如何创建和组合的。
 
 [维基百科](https://en.wikipedia.org/wiki/Creational_pattern)
 
 #### 抽象工厂模式
 
-The abstract factory pattern provides a way to encapsulate a group of individual factories that have a common theme without specifying their concrete classes. In normal usage, the client software creates a concrete implementation of the abstract factory and then uses the generic interface of the factory to create the concrete objects that are part of the theme. The client doesn't know (or care) which concrete objects it gets from each of these internal factories, since it uses only the generic interfaces of their products. This pattern separates the details of implementation of a set of objects from their general usage and relies on object composition, as object creation is implemented in methods exposed in the factory interface.
+抽象工厂模式提供了一种方式来封装一组具有共同主题的个体工厂，而不指定他们的具体类。 在正常使用中，客户端软件创建抽象工厂的具体实现，然后使用工厂的通用接口创建作为主题一部分的具体对象。 客户端不知道（或关心）具体对象从哪个内部工厂获得，因为它仅使用其产品的通用接口。 此模式将一组对象的实现细节与其一般用法分离，并依赖对象组合，因为对象创建是在工厂接口中公开的方法中实现的。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/abstract_factory.rb) | [维基百科](https://en.wikipedia.org/wiki/Abstract_factory_pattern)
 
 #### 生成器模式
 
-The builder pattern is an object creation software design pattern. Unlike the abstract factory pattern and the factory method pattern whose intention is to enable polymorphism, the intention of the builder pattern is to find a solution to the telescoping constructor anti-pattern[citation needed]. The telescoping constructor anti-pattern occurs when the increase of object constructor parameter combination leads to an exponential list of constructors. Instead of using numerous constructors, the builder pattern uses another object, a builder, that receives each initialization parameter step by step and then returns the resulting constructed object at once.
+生成器模式是一种对象创建型软件设计模式。 不像抽象工厂模式和工厂方法模式的意图是启用多态性，生成器模式的意图是找到一个解决方案的伸缩构造函数反模式。 当对象构造函数参数组合的增加导致构造函数的指数级列表时，出现了伸缩构造函数反模式。 生成器模式使用另一个对象，即生成器，而不是使用大量构造函数，而是逐步接收每个初始化参数，然后一次返回生成的构造对象。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/builder.rb) | [维基百科](https://en.wikipedia.org/wiki/Builder_pattern)
 
 #### 工厂模式
 
-In class-based programming, the factory method pattern is a creational pattern that uses factory methods to deal with the problem of creating objects without having to specify the exact class of the object that will be created. This is done by creating objects by calling a factory method—either specified in an interface and implemented by child classes, or implemented in a base class and optionally overridden by derived classes—rather than by calling a constructor.
+在基于类的编程中，工厂方法模式是一种创建型模式，它使用工厂方法来处理创建对象的问题，而无需指定将要创建对象的具体类。 这是通过调用工厂方法（在接口中指定并由子类实现，或在基类中实现，并随意地由派生类覆盖而不是通过调用构造函数）创建对象来完成的。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/factory.rb) | [维基百科](https://en.wikipedia.org/wiki/Factory_method_pattern)
 
 #### 原型模式
 
-The prototype pattern is a creational design pattern in software development. It is used when the type of objects to create is determined by a prototypical instance, which is cloned to produce new objects. This pattern is used to:
+原型模式是软件开发中的创建设计模式。 当要创建的对象类型由原型实例确定时使用，该原型实例被克隆以生成新对象。 此模式用于：
 
-* avoid subclasses of an object creator in the client application, like the abstract factory pattern does.
-* avoid the inherent cost of creating a new object in the standard way (e.g., using the 'new' keyword) when it is prohibitively expensive for a given application.
+* 在客户端应用程序中消除对象创建者的子类，类似于抽象工厂模式的作法。
+* 当给定应用程序过于昂贵时，避免以标准方式创建新对象（例如，使用“new”关键字）的固有成本。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/prototype.rb) | [维基百科](https://en.wikipedia.org/wiki/Prototype_pattern)
 
 #### 单例模式
 
-Ensure a class only has one instance, and provide a global point of access to it. This is useful when exactly one object is needed to coordinate actions across the system. The concept is sometimes generalized to systems that operate more efficiently when only one object exists, or that restrict the instantiation to a certain number of objects.
+确保一个类只有一个实例，并提供一个访问它的全局指针。 当需要一个对象来协调系统上的操作时，这是很有用的。 该概念有时被推广到仅有一个对象能更有效操作，或者对象实例化限制到一定数量的系统。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/creational/singleton.rb) | [维基百科](https://en.wikipedia.org/wiki/Singleton_pattern)
 
