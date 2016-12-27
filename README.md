@@ -291,87 +291,87 @@ ISP旨在保持系统解耦，从而更容易重构，更改和重新部署。
 
 ### 行为型模式 
 
-In software engineering, behavioral design patterns are design patterns that identify common communication patterns between objects and realize these patterns. By doing so, these patterns increase flexibility in carrying out this communication.
+在软件工程中，行为设计模式是识别对象之间的公共通信模式并实现这些模式的设计模式。 通过这样做，这些模式增加了执行该通信的灵活性。
 
 [维基百科](https://en.wikipedia.org/wiki/Behavioral_pattern)
 
 #### 责任链模式
 
-In object-oriented design, the chain-of-responsibility pattern is a design pattern consisting of a source of command objects and a series of processing objects. Each processing object contains logic that defines the types of command objects that it can handle; the rest are passed to the next processing object in the chain. A mechanism also exists for adding new processing objects to the end of this chain.
+在面向对象设计中，责任链模式是由命令对象源和一系列处理对象组成的设计模式。 每个处理对象包含的逻辑，定义了其可以处理的命令对象的类型；其余的被传递到链中的下一个处理对象。 还存在一个将新的处理对象添加到该链的末端的机制。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/chain_of_responsibility.rb) | [维基百科](https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
 
 #### 命令模式
 
-Encapsulate a request as an object, thereby allowing for the parameterization of clients with different requests, and the queuing or logging of requests. It also allows for the support of undoable operations.
+将请求封装为对象，从而允许具有不同请求的客户端的参数化，以及请求的排队或日志记录。 它还允许支持可撤销操作。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/command.rb) | [维基百科](https://en.wikipedia.org/wiki/Command_pattern)
 
 #### 解释器模式
 
-In computer programming, the interpreter pattern is a design pattern that specifies how to evaluate sentences in a language. The basic idea is to have a class for each symbol (terminal or nonterminal) in a specialized computer language. The syntax tree of a sentence in the language is an instance of the composite pattern and is used to evaluate (interpret) the sentence for a client.
+在计算机编程中，解释器模式是说明如何评估语言中的句子的设计模式。 基本思想是在专门的计算机语言中为每个符号（终端或非终端）设置一个类。 语言中的句子的语法树是复合模式的实例，并且用于为客户端评估（解释）句子。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/interpreter.rb) | [维基百科](https://en.wikipedia.org/wiki/Interpreter_pattern)
 
 #### 迭代器模式
 
-The iterator design pattern provides sequential access to elements within a container without exposing how the container actually represents the elements. The iterator can be thought of as a moveable pointer that allows access to elements encapsulated within a container.
+迭代器设计模式提供对容器中的元素的顺序访问，而不暴露容器如何具体地表示元素。 迭代器可以被认为是一个可移动的指针，允许访问封装在容器中的元素。
 
-* External iterator: The iteration logic is contained in a separate class. The iteration class can be generalized to handle multiple object types as long as they allow indexing. It require the additional class to do the actual iterating, but they do allow for greater flexibility because you can control the iteration, which elements are iterated over and in what order.
+*外部迭代器：迭代逻辑包含在一个单独的类中。 迭代类可以被概括为处理多个对象类型，只要它们允许索引。 虽然它需要附加类来做实际的迭代，但它们允许更大的灵活性，因为你可以控制迭代及迭代顺序。
 
-* Internal iterator: all the iterating logic occurs inside the aggregate object. Use a code block to pass your logic into the aggregate which then calls the block for each of it's elements.
+*内部迭代器：所有迭代逻辑发生在聚合对象内部。 使用代码块将你的逻辑传递给聚合，然后为每个元素调用代码块。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/iterator.rb) | [维基百科](https://en.wikipedia.org/wiki/Iterator_pattern)
 
 #### 中介者模式
 
-Usually a program is made up of a large number of classes. So the logic and computation is distributed among these classes. However, as more classes are developed in a program, especially during maintenance and/or refactoring, the problem of communication between these classes may become more complex. This makes the program harder to read and maintain. Furthermore, it can become difficult to change the program, since any change may affect code in several other classes. With the mediator pattern, communication between objects is encapsulated with a mediator object. Objects no longer communicate directly with each other, but instead communicate through the mediator. This reduces the dependencies between communicating objects, thereby lowering the coupling.
+通常一个程序是由大量的类组成的，所以逻辑和计算分布在这些类中。 然而，随着在程序中开发更多的类，特别是在维护或重构期间，这些类之间的通信问题可能变得更复杂。这使得程序更难以阅读和维护。 此外，可能变得难以改变程序，因为任何改变可能影响其他几个类中的代码。 使用中介器模式，对象之间的通信用中介器对象封装。 对象彼此间不再直接通信，而是通过中介器进行通信。 这减少了通信对象之间的依赖性，从而降低了耦合。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/mediator.rb) | [维基百科](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 #### 备忘录模式
 
-The memento pattern is implemented with three objects: the originator, a caretaker and a memento. The originator is some object that has an internal state. The caretaker is going to do something to the originator, but wants to be able to undo the change. The caretaker first asks the originator for a memento object. Then it does whatever operation (or sequence of operations) it was going to do. To roll back to the state before the operations, it returns the memento object to the originator. The memento object itself is an opaque object (one which the caretaker cannot, or should not, change). When using this pattern, care should be taken if the originator may change other objects or resources - the memento pattern operates on a single object.
+备忘录模式由三个对象实现：发起者，守护者备忘录。 发起者是具有内部状态的一些对象。 守护者将操作发起者，但希望能够撤消该更改。 守护者首先向发起人请求备忘录。 然后它将要做任何操作（或操作序列）。 要回滚到操作之前的状态，它将备忘录对象返回给发起者。 备忘录对象本身是一个不透明的对象（守护者不能，或不应该改变）。当使用这种模式时，请注意 - 如果发起者可能改变其他对象或资源，备忘录模式对单个对象进行操作。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/momento.rb) | [维基百科](https://en.wikipedia.org/wiki/Memento_pattern)
 
 #### 观察者模式
 
-The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods. It is mainly used to implement distributed event handling systems. The Observer pattern is also a key part in the familiar model–view–controller (MVC) architectural pattern. The observer pattern is implemented in numerous programming libraries and systems, including almost all GUI toolkits.
+观察者模式是一种软件设计模式，其中称为主题的对象维护其依赖项的列表，称为观察者，并且通常通过调用它们的方法来自动通知任何状态改变。 它主要用于实现分布式事件处理系统。 观察者模式也是熟悉的模型-视图-控制器（MVC）架构模式中的关键部分。观察者模式在许多编程库和系统中实现，包括几乎所有的GUI工具包。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/observer.rb) | [维基百科](https://en.wikipedia.org/wiki/Observer_pattern)
 
 #### 状态模式
 
-The state pattern is a behavioral software design pattern that implements a state machine in an object-oriented way. With the state pattern, a state machine is implemented by implementing each individual state as a derived class of the state pattern interface, and implementing state transitions by invoking methods defined by the pattern's superclass.
+状态模式是以面向对象的方式实现状态机的行为软件设计模式。 利用状态模式，通过将每个单独状态实现为状态模式接口的派生类，并通过调用由模式的超类定义的方法来实现状态转换，从而实现了状态机。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/state.rb) | [维基百科](https://en.wikipedia.org/wiki/State_pattern)
 
 #### 策略模式
 
-In computer programming, the strategy pattern (also known as the policy pattern) is a software design pattern that enables an algorithm's behavior to be selected at runtime. The strategy pattern
+在计算机编程中，策略模式（也称为政策模式）是使得能够在运行时选择算法的软件设计模式。战略模式
 
-* defines a family of algorithms,
-* encapsulates each algorithm, and
-* makes the algorithms interchangeable within that family.
+*定义一系列算法，
+*封装每个算法
+*使得算法在该系列中可互换。
 
-Strategy lets the algorithm vary independently from clients that use it. Strategy is one of the patterns included in the influential book Design Patterns by Gamma et al. that popularized the concept of using patterns to describe software design.
+策略模式允许算法变化独立于使用它的客户端。Gamma等人所著的一本非常有影响力的书“设计模式”普及了使用模式来描述软件设计的概念，策略模式是其中包含的模式之一。
 
-For instance, a class that performs validation on incoming data may use a strategy pattern to select a validation algorithm based on the type of data, the source of the data, user choice, or other discriminating factors. These factors are not known for each case until run-time, and may require radically different validation to be performed. The validation strategies, encapsulated separately from the validating object, may be used by other validating objects in different areas of the system (or even different systems) without code duplication.
+例如，对输入数据执行验证的类可以使用策略模式来基于数据的类型、数据的源、用户选择或其他辨别因素来选择验证算法。直到运行时间，这些因素在每种情况下才是可知的，并且可能需要进行彻底不同的验证。与验证对象分开封装的验证策略，可以由系统的不同区域（或甚至不同系统）中的其他验证对象使用，而无需代码重复。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/strategy.rb) | [维基百科](https://en.wikipedia.org/wiki/Strategy_pattern)
 
 #### 模板方法模式
 
-In object-oriented programming, first a class is created that provides the basic steps of an algorithm design. These steps are implemented using abstract methods. Later on, subclasses change the abstract methods to implement real actions. Thus the general algorithm is saved in one place but the concrete steps may be changed by the subclasses.
+在面向对象编程中，首先创建一个提供算法设计的基本步骤的类。 这些步骤使用抽象方法实现。 之后，子类改变了抽象方法来实现真正的操作。 因此通用算法保存在一个位置，但具体步骤可以由子类修改。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/template_method.rb) | [维基百科](https://en.wikipedia.org/wiki/Template_method_pattern)
 
 #### 访问者模式
 
-n object-oriented programming and software engineering, the visitor design pattern is a way of separating an algorithm from an object structure on which it operates. A practical result of this separation is the ability to add new operations to existing object structures without modifying those structures. It is one way to follow the open/closed principle.
+在面向对象的编程和软件工程中，访问者设计模式是将算法与其操作的对象结构分离的一种方式。这种分离的实际结果是在不修改这些结构的情况下向现有对象结构添加新操作的能力。它是遵循开放封闭原则的一种方式。
 
-In essence, the visitor allows one to add new virtual functions to a family of classes without modifying the classes themselves; instead, one creates a visitor class that implements all of the appropriate specializations of the virtual function. The visitor takes the instance reference as input, and implements the goal through double dispatch.
+实质上，访问者模式允许向一系列类添加新的虚拟函数而不修改类本身，反而是创建一个访问者类来实现所有虚拟函数适当的特殊化。访问者将实例引用作为输入，并通过双调度实现目标。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/behavioral/visitor.rb) | [维基百科](https://en.wikipedia.org/wiki/Visitor_pattern)
 
