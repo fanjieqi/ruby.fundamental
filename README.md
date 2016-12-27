@@ -239,43 +239,43 @@ ISP旨在保持系统解耦，从而更容易重构，更改和重新部署。
 
 ### 结构型模式
 
-In software engineering, structural design patterns are design patterns that ease the design by identifying a simple way to realize relationships between entities.
+在软件工程中，结构设计模式通过确定一种简单方式来认识实体之间的关系，从而简化设计的设计模式。
 
 [维基百科](https://en.wikipedia.org/wiki/Structural_pattern)
 
 #### 适配器模式
 
-In software engineering, the adapter pattern is a software design pattern that allows the interface of an existing class to be used as another interface. It is often used to make existing classes work with others without modifying their source code.
+在软件工程中，适配器模式是一种允许现有类的接口用作另一个接口的软件设计模式。 它通常用于使现有类与其他类一起工作而不用不修改其源代码。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/adapter.rb) | [维基百科](https://en.wikipedia.org/wiki/Adapter_pattern)
 
 #### 组合模式
 
-The composite design pattern is a structural pattern used to represent objects that have a hierarchical tree structure. It allows for the uniform treatment of both individual leaf nodes and of branches composed of many nodes.
+组合模式是一种用于表示具有分层树结构的对象的结构模式。 它允许单个叶节点和由许多节点组成的分支的统一处理。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/composite.rb) | [维基百科](https://en.wikipedia.org/wiki/Composite_pattern)
 
 #### 修饰模式
 
-In object-oriented programming, the decorator pattern (also known as Wrapper, an alternative naming shared with the Adapter pattern) is a design pattern that allows behavior to be added to an individual object, either statically or dynamically, without affecting the behavior of other objects from the same class. The decorator pattern is often useful for adhering to the Single Responsibility Principle, as it allows functionality to be divided between classes with unique areas of concern.
+在面向对象编程中，修饰模式（也称为Wrapper，适配器模式的替代命名）是一种设计模式，允许将静态行为或动态行为添加到单个对象，而不影响同一个类的其他对象。修饰模式通常对遵守单一责任原则很有用，因为它允许功能被划分到具有唯一关注领域的类之中。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/decorator.rb) | [维基百科](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 #### 外观模式
 
-The Facade design pattern is often used when a system is very complex or difficult to understand because the system has a large number of interdependent classes or its source code is unavailable. This pattern hides the complexities of the larger system and provides a simpler interface to the client. It typically involves a single wrapper class which contains a set of members required by client. These members access the system on behalf of the facade client and hide the implementation details.
+当系统具有大量相互依赖的类或其源代码不可用以至于非常复杂或难以理解时，通常使用外观设计模式。 这种模式隐藏了较大系统的复杂性，并为客户端提供了一个更简单的接口。它通常有一个包含客户端所需的一组成员的单个包装类。 这些成员代表外观客户端访问系统并隐藏实现细节。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/facade.rb) | [维基百科](https://en.wikipedia.org/wiki/Facade_pattern)
 
 #### 享元模式
 
-In computer programming, flyweight is a software design pattern. A flyweight is an object that minimizes memory use by sharing as much data as possible with other similar objects; it is a way to use objects in large numbers when a simple repeated representation would use an unacceptable amount of memory. Often some parts of the object state can be shared, and it is common practice to hold them in external data structures and pass them to the flyweight objects temporarily when they are used.
+在计算机编程中，享元模式是一种软件设计模式。享元模式是一个对象，通过与其他类似对象共享尽可能多的数据来最小化内存使用；它是一种大量使用对象的方法，用于当简单且重复的指代将使用巨量内存时。 通常，对象状态的某些部分是可以共享的，并且通常的做法是将它们保存在外部数据结构中，并在使用时将它们临时传递给享元对象。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/flyweight.rb) | [维基百科](https://en.wikipedia.org/wiki/Flyweight_pattern)
 
 #### 代理模式
 
-A proxy, in its most general form, is a class functioning as an interface to something else. The proxy could interface to anything: a network connection, a large object in memory, a file, or some other resource that is expensive or impossible to duplicate. In short, a proxy is a wrapper or agent object that is being called by the client to access the real serving object behind the scenes. Use of the proxy can simply be forwarding to the real object, or can provide additional logic. In the proxy extra functionality can be provided, for example caching when operations on the real object are resource intensive, or checking preconditions before operations on the real object are invoked. For the client, usage of a proxy object is similar to using the real object, because both implement the same interface.
+代理，最普遍的形式是一个类，作为其他东西的接口。 代理可以做任何东西的接口：网络连接，存储器中的大对象，文件或一些昂贵或不可能复制的其他资源。 简而言之，代理是一个包装器或代理对象，客户端调用它来访问幕后的实际服务对象。 代理的使用可以简单地转发到实际对象，或者可以提供附加逻辑。 在代理中，可以提供额外的功能，例如当实际对象进行资源密集型操作时提供高速缓存，或者在调用实际对象的操作之前检查前提条件。 对于客户端，代理对象的用法类似于使用实际对象，因为两者都实现相同的接口。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/patterns/structural/proxy.rb) | [维基百科](https://en.wikipedia.org/wiki/Proxy_pattern)
 
