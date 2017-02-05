@@ -562,11 +562,11 @@ ISP旨在保持系统解耦，从而更容易重构，更改和重新部署。
 
 ### 排序
 
-A sorting algorithm is an algorithm that puts elements of a list in a certain order. The most-used orders are numerical order and lexicographical order. Efficient sorting is important for optimizing the use of other algorithms (such as search and merge algorithms) which require input data to be in sorted lists; it is also often useful for canonicalizing data and for producing human-readable output.
+排序算法是以一定顺序排列列表元素的算法。 最常用的是数字顺序和字典顺序。 高效排序对于优化其他算法（例如搜索和合并算法）的使用是重要的，这些算法要求输入数据在排序列表中; 它也常用于规范化数据和产生人类可读的输出。
 
 #### 冒泡排序
 
-Bubble sort has many of the same properties as insertion sort, but has slightly higher overhead. In the case of nearly sorted data, bubble sort takes O(n) time, but requires at least 2 passes through the data (whereas insertion sort requires something more like 1 pass).
+冒泡排序和插入排序有许多相同的属性，但有稍高的开销。 在几乎有序的数据的情况下，冒泡排序需要O（n）时间，但是需要至少遍历2遍数据（而插入排序需要差不多1遍）。
 
 | 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
@@ -576,8 +576,8 @@ Bubble sort has many of the same properties as insertion sort, but has slightly 
 
 #### 插入排序
 
-Although it is one of the elementary sorting algorithms with O(n2) worst-case time, insertion sort is the algorithm of choice either when the data is nearly sorted (because it is adaptive) or when the problem size is small (because it has low overhead).
-For these reasons, and because it is also stable, insertion sort is often used as the recursive base case (when the problem size is small) for higher overhead divide-and-conquer sorting algorithms, such as merge sort or quick sort
+虽然它是具有O（n2）最坏情况时间的基本排序算法之一，但是当数据几乎被排序（因为它是自适应的）时或者当问题规模小时（因为它低开销），插入排序是可以选择的算法。
+由于这些原因，并且因为它也是稳定的，所以插入排序通常用于更高开销的分治算法的递归基础（当问题规模较小时），例如合并排序或快速排序。
 
 | 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
@@ -587,8 +587,8 @@ For these reasons, and because it is also stable, insertion sort is often used a
 
 #### 选择排序
 
-From the comparions presented here, one might conclude that selection sort should never be used. It does not adapt to the data in any way (notice that the four animations above run in lock step), so its runtime is always quadratic.
-However, selection sort has the property of minimizing the number of swaps. In applications where the cost of swapping items is high, selection sort very well may be the algorithm of choice.
+从这里提供的比较，可能会得出结论，不应该使用选择排序。 它不适合任何排列方式的数据（注意上面的四个图表），它的运行时总是二次的。
+但是，选择排序具有最小化交换数量的属性。 在交换项目的成本高的应用中，可能选择使用选择排序。
 
 | 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
@@ -598,9 +598,9 @@ However, selection sort has the property of minimizing the number of swaps. In a
 
 #### 希尔排序
 
-The worse-case time complexity of shell sort depends on the increment sequence. For the increments 1 4 13 40 121…, which is what is used here, the time complexity is O(n3/2). For other increments, time complexity is known to be O(n4/3) and even O(n·lg2(n)). Neither tight upper bounds on time complexity nor the best increment sequence are known.
-Because shell sort is based on insertion sort, shell sort inherits insertion sort’s adaptive properties. The adapation is not as dramatic because shell sort requires one pass through the data for each increment, but it is significant. For the increment sequence shown above, there are log3(n) increments, so the time complexity for nearly sorted data is O(n·log3(n)).
-Because of its low overhead, relatively simple implementation, adaptive properties, and sub-quadratic time complexity, shell sort may be a viable alternative to the O(n·lg(n)) sorting algorithms for some applications when the data to be sorted is not very large.
+希尔排序的最糟糕的时间复杂度取决于增量序列。 对于这里使用的增量1 4 13 40 121 ...，时间复杂度是O（n3 / 2）。 对于其他增量，已知时间复杂度为O（n4 / 3）和甚至O（n·lg2（n））。 时间复杂度的上限和最佳增量序列都是未知的。
+因为希尔排序基于插入排序，所以shell排序继承了插入排序的自适应属性。自适应属性不那么显着，因为希尔排序需要遍历一遍每次递增的数据的，但它是重要的。 对于上述增量序列，有log3（n）个增量，因此几乎排序的数据的时间复杂度为O（n·log3（n））。
+由于其低开销，相对简单的实现，自适应属性和子二次时间复杂度，对于某些应用程序，当需要排序的数据不是很大的时候，希尔排序可能是O（n·lg（n））排序算法的可行替代 。
 
 | 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
@@ -610,10 +610,10 @@ Because of its low overhead, relatively simple implementation, adaptive properti
 
 #### 堆排序
 
-Heap sort is simple to implement, performs an O(n·lg(n)) in-place sort, but is not stable.
-The first loop, the Θ(n) “heapify” phase, puts the array into heap order. The second loop, the O(n·lg(n)) “sortdown” phase, repeatedly extracts the maximum and restores heap order.
-The sink function is written recursively for clarity. Thus, as shown, the code requires Θ(lg(n)) space for the recursive call stack. However, the tail recursion in sink() is easily converted to iteration, which yields the O(1) space bound.
-Both phases are slightly adaptive, though not in any particularly useful manner. In the nearly sorted case, the heapify phase destroys the original order. In the reversed case, the heapify phase is as fast as possible since the array starts in heap order, but then the sortdown phase is typical. In the few unique keys case, there is some speedup but not as much as in shell sort or 3-way quicksort.
+堆排序易于实现，执行O（n·lg（n））就地排序，但不稳定。
+第一个循环，Θ（n）堆化阶段，将数组放入堆。 第二个循环，O（n·lg（n））排序阶段，重复提取最大值和修复堆顺序。
+为了清楚起见，递归地写下沉功能。 因此，如图所示，代码需要用于递归调用栈的Θ（lg（n））空间。 然而，下沉中的尾递归很容易转换为迭代，这产生了O（1）空间束缚。
+两个阶段略微自适应，虽然不是以任何特别有用的方式。 在几乎有序的情况下，堆化阶段销毁原始顺序。 在相反的情况下，堆化阶段是尽可能快的，因为数组以堆顺序开始，但在排序阶段是一贯的。 在少数独特的关键字案例中，有一些加速，但不如希尔排序或3路快速排序。
 
 | 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
@@ -623,9 +623,9 @@ Both phases are slightly adaptive, though not in any particularly useful manner.
 
 #### 归并排序
 
-Merge sort is very predictable. It makes between 0.5lg(n) and lg(n) comparisons per element, and between lg(n) and 1.5lg(n) swaps per element. The minima are achieved for already sorted data; the maxima are achieved, on average, for random data. If using Θ(n) extra space is of no concern, then merge sort is an excellent choice: It is simple to implement, and it is the only stable O(n·lg(n)) sorting algorithm. Note that when sorting linked lists, merge sort requires only Θ(lg(n)) extra space (for recursion).
-Merge sort is the algorithm of choice for a variety of situations: when stability is required, when sorting linked lists, and when random access is much more expensive than sequential access (for example, external sorting on tape).
-There do exist linear time in-place merge algorithms for the last step of the algorithm, but they are both expensive and complex. The complexity is justified for applications such as external sorting when Θ(n) extra space is not available.
+归并排序是十分可预测的。 它使得每个元素进行0.5lg（n）到lg（n）次比较，以及每个元素交换lg（n）到1.5lg（n）次。 对已经排序的数据实现最小比较和交换; 平均来说，对于随机数据实现最多比较和交换。 如果不担心使用Θ（n）额外空间，那么归并排序是一个很好的选择：它很容易实现，它是唯一稳定的O（n·lg（n））排序算法。 注意，当排序链表时，归并排序只需要Θ（lg（n））额外空间（用于递归）。
+归并排序是针对各种情况都可选择的算法：需要稳定性时，排序链表时，以及当随机访问比顺序访问贵得多时（例如，磁带上的外部排序）。
+对于算法的最后一步，存在线性时间就地归并算法，但是它们既昂贵又复杂。 当Θ（n）额外空间不可用时，这个复杂度还是合理的。
 
 | 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
@@ -635,9 +635,9 @@ There do exist linear time in-place merge algorithms for the last step of the al
 
 #### 快速排序
 
-When carefully implemented, quick sort is robust and has low overhead. When a stable sort is not needed, quick sort is an excellent general-purpose sort – although the 3-way partitioning version should always be used instead.
-The 2-way partitioning code shown above is written for clarity rather than optimal performance; it exhibits poor locality, and, critically, exhibits O(n2) time when there are few unique keys. A more efficient and robust 2-way partitioning method is given in Quicksort is Optimal by Robert Sedgewick and Jon Bentley. The robust partitioning produces balanced recursion when there are many values equal to the pivot, yielding probabilistic guarantees of O(n·lg(n)) time and O(lg(n)) space for all inputs.
-With both sub-sorts performed recursively, quick sort requires O(n) extra space for the recursion stack in the worst case when recursion is not balanced. This is exceedingly unlikely to occur, but it can be avoided by sorting the smaller sub-array recursively first; the second sub-array sort is a tail recursive call, which may be done with iteration instead. With this optimization, the algorithm uses O(lg(n)) extra space in the worst case.
+当细心实现时，快速排序是健壮的并且具有低开销。当不需要稳定的排序时，快速排序是一个很好的通用排序 - 虽然应该总是使用3路分区版本。
+上面显示的双路分区代码是为了清楚而不是最佳性能而编写的;它局部表现差，并且，当关键字很少花费O（n2）时间。Robert Sedgewick和Jon Bentley的论文Quicksort is Optimal给出了更有效和鲁棒的双向分割方法。当存在许多值等于中枢值时，鲁棒分区产生平衡递归，为所有输入产生O（n·lg（n））时间和O（lg（n））空间的概率保证。
+对于递归执行的两个子排序，快速排序在递归不平衡的最坏情况下需要O（n）额外的空间用于递归堆栈。这是极不可能发生的，但它可以通过递归排序较小的子数组避免;第二个子数组排序是一个尾递归调用，可以通过迭代来完成。通过这种优化，算法在最坏的情况下使用O（lg（n））额外空间。
 
 | 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
@@ -659,7 +659,7 @@ With both sub-sorts performed recursively, quick sort requires O(n) extra space 
 
 #### 二分查找
 
-In computer science, binary search, also known as half-interval search or logarithmic search, is a search algorithm that finds the position of a target value within a sorted array. It compares the target value to the middle element of the array; if they are unequal, the half in which the target cannot lie is eliminated and the search continues on the remaining half until it is successful.
+在计算机科学中，二分搜索，也称为半间隔搜索或对数搜索，是一种搜索算法，其在排序的数组中找到目标值的位置。 它将目标值与数组的中间元素进行比较; 如果它们不相等，则目标值不可能呆在的一半被排序，并且搜索在剩余的一半继续，直到它成功。
 
 | 最好 | 平均 | 最坏 |
 |-----:|--------:|------:|
@@ -669,7 +669,7 @@ In computer science, binary search, also known as half-interval search or logari
 
 #### KMP查找
 
-In computer science, the Knuth–Morris–Pratt string searching algorithm (or KMP algorithm) searches for occurrences of a "word" W within a main "text string" S by employing the observation that when a mismatch occurs, the word itself embodies sufficient information to determine where the next match could begin, thus bypassing re-examination of previously matched characters.
+在计算机科学中，Knuth-Morris-Pratt字符串搜索算法（或KMP算法）通过采用以下观察来搜索主“文本串”S内的“字”W的出现：当出现不匹配时，该字本身体现足够信息以确定下一个匹配可以开始的位置，从而绕过对先前匹配的字符的重新检查。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/algorithms/sort/knuth-morris-pratt.rb) | [维基百科](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
