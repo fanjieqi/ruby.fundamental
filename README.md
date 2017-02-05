@@ -395,11 +395,11 @@ ISP旨在保持系统解耦，从而更容易重构，更改和重新部署。
 
 ## 数据结构 
 
-In computer science, big O notation is used to classify algorithms by how they respond to changes in input size, such as how the processing time of an algorithm changes as the problem size becomes extremely large. In analytic number theory it is used to estimate the "error committed" while replacing the asymptotic size of an arithmetical function by the value it takes at a large finite argument. A famous example is the problem of estimating the remainder term in the prime number theorem.
+在计算机科学中，大O符号用于通过算法如何响应输入大小的变化来对其进行分类，例如算法的处理时间随着问题规模变得非常大而变化。 在分析数论中，它用于估计“错误提交”，用一个大的有限自变量取代一个算术函数的渐进大小。 一个着名的例子是估计质数定理中的余项的问题。
 
 ### 数据结构的基本公理
 
-The running time performance of the common language runtime is given by a set of axioms which we shall now postulate.
+公共语言的运行时间性能由我们现在假设的一组公理给出。
 
 [示例](https://github.com/fanjieqi/ruby.fundamental/blob/master/structures/axioms.rb)
 
@@ -423,11 +423,11 @@ The running time performance of the common language runtime is given by a set of
 
 ### 实现 
 
-> NOTE: All data structures are given as example for learning purpose. For using in project please refer to other resources. Most examples were taken from [Here](http://www.brpreiss.com/) witch is proper Bruno R. Preiss.
+> NOTE: 所有数据结构都是作为学习目的的示例。 对于在项目中使用，请参考其他资源。 大多数例子取自Bruno R. Preiss的[网站](http://www.brpreiss.com/)。
 
 #### 栈
 
-The stack is the sibling of the queue. It mimicks a real-life stack (e.g. of paper). It is FILO (first-in-last-out), so that when items are retrieved from the stack, they are returned in the reverse of the order in which they were added. Again, Ruby Arrays provide a perfect container. As with the Queue, it could also be implemented using a linked list.
+堆栈是队列的兄弟。 它模仿了现实生活中的堆栈（例如纸）。 它是“先进后出”FILO（first-in-last-out），因此当从堆栈中检索项目时，它们按照添加顺序的反向返回。 并且，Ruby数组提供了一个完美的容器。 与队列一样，它也可以用链表实现。
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
@@ -439,7 +439,7 @@ The stack is the sibling of the queue. It mimicks a real-life stack (e.g. of pap
 
 #### 队列
 
-A queue is a simple container-based structure that mimics a real-life queue (e.g. waiting in line at the bank). It is FIFO (first-in-first-out), meaning that when you retrieve items from the queue, they are returned in the order in which they entered. Ruby Arrays provide methods that make Queue implementation trivially easy, but having them named appropriately and contained in a convenience class is worth it to see how they are implemented, and because other structures will inherit from this one. An alternate implementation could be done using a linked list.
+队列是一个简单的基于容器的结构，模拟了现实生活中的队列（例如在银行排队等待）。 它是先进先出FIFO（first-in-first-out），意味着当您从队列中检索项目时，它们按照它们的添加顺序返回。 Ruby数组提供了使Queue实现简单易用的方法，但是让它们适当地命名并包含在一个方便的类中是值得去看看它们是如何实现的，并且因为其他结构将继承这个方法。队列可以使用链表来完成替代实现。
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
@@ -451,7 +451,7 @@ A queue is a simple container-based structure that mimics a real-life queue (e.g
 
 #### 双端队列
 
-A Deque is a queue which allows adding and removing items at both ends.
+双端队列是一个允许在两端添加和删除项目的队列。
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
@@ -463,7 +463,7 @@ A Deque is a queue which allows adding and removing items at both ends.
 
 #### 单向链表
 
-Singly linked lists contain nodes which have a data field as well as a 'next' field, which points to the next node in line of nodes. Operations that can be performed on singly linked lists include insertion, deletion and traversal.
+单向链表的节点包含数据字段以及“下一个”域，其指向链表中的下一个节点。可以对单向链表执行的操作包括插入，删除和遍历。
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
@@ -473,7 +473,7 @@ Singly linked lists contain nodes which have a data field as well as a 'next' fi
 
 #### 双向链表
 
-In a doubly-linked list , each list element contains two references--one to its successor and one to its predecessor. 
+在双向链表中，每个链表节点包含两个引用 - 一个指向其后继，一个指向其前任。
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
@@ -483,7 +483,7 @@ In a doubly-linked list , each list element contains two references--one to its 
 
 #### 有序列表
  
-An ordered list is a list in which the order of the items is significant. However, the items in an ordered lists are not necessarily sorted. Consequently, it is possible to change the order of items and still have a valid ordered list.
+有序列表是一种项目顺序非常重要的列表。但是，有序列表中的项目不一定排序。因此，可以改变项目的顺序，并且仍然具有有效的有序列表。
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
@@ -496,7 +496,7 @@ An ordered list is a list in which the order of the items is significant. Howeve
 
 #### 哈希表
 
-A hash table  is a searchable container. As such, it provides methods for putting an object into the container, finding an object in the container, and removing an object from the container.
+哈希表是一种可搜索的容器。因此，它提供了用于插入对象、查找对象、删除对象的方法。
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
@@ -506,7 +506,7 @@ A hash table  is a searchable container. As such, it provides methods for puttin
 
 #### 二叉树
 
-A binary tree is a tree in which each node can have a maximum of two children. The children are designated left and right. 
+二叉树是每个节点最多可以有两个子节点的树。孩子们被指定为左节点和右节点。
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
@@ -516,7 +516,7 @@ A binary tree is a tree in which each node can have a maximum of two children. T
 
 #### 二叉查找树
 
-In computer science, binary search trees (BST), sometimes called ordered or sorted binary trees, are a particular type of containers: data structures that store "items" (such as numbers, names etc.) in memory. They allow fast lookup, addition and removal of items, and can be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key (e.g., finding the phone number of a person by name)
+在计算机科学中，二叉查找树（BST）（有时称为有序二叉树或排序二叉树）是特定类型的容器：在内存中存储“项目”（例如数字，名称等）的数据结构。 它们允许快速查找，添加和删除项目，并且可以用于实现项目的动态集合或者允许通过查找其键来查找项目（例如，通过名称找到人的电话号码）。
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
@@ -526,7 +526,7 @@ In computer science, binary search trees (BST), sometimes called ordered or sort
 
 #### B树
 
-In computer science, a B-tree is a self-balancing tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree is a generalization of a binary search tree in that a node can have more than two children (Comer . Unlike self-balancing binary search trees, the B-tree is optimized for systems that read and write large blocks of data. B-trees are a good example of a data structure for external memory. It is commonly used in databases and filesystems.
+在计算机科学中，B树是自平衡树数据结构，其保持数据有序并允许在对数时间内的搜索，顺序存取，插入和删除。 B树是二叉查找树的概括，因为一个节点可以有多于两个子节点（与自平衡二叉搜索树不同，B树是针对读取和写入大块数据的系统进行优化的。 B树是提供给外存的数据结构的一个很好的例子，它常用于数据库和文件系统。
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
@@ -536,7 +536,7 @@ In computer science, a B-tree is a self-balancing tree data structure that keeps
 
 #### 二叉堆
 
-A binary heap is a heap-ordered complete binary tree which is implemented using an array. In a heap the smallest key is found at the root and since the root is always found in the first position of the array, finding the smallest key is a trivial operation in a binary heap.
+二叉堆是使用数组实现的堆有序完整二叉树。 在堆中，最小的键在根处找到，并且由于根总是在数组的第一个位置找到，因此找到最小的键是二进制堆中的一个微不足道的操作。
 
 | 数据结构 | 访问平均 | 查找平均 | 插入平均 | 删除平均 | 访问最坏 | 查找最坏 | 插入最坏 | 删除最坏 |
 |-----------|---------------:|---------------:|------------------:|-----------------:|-------------:|-------------:|----------------:|---------------:|
